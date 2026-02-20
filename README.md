@@ -1,85 +1,84 @@
 # API Articles – TP Node.js (Niveau débutant)
 
-## 📌 Description du projet
+## Description
 
-Ce projet consiste à développer une API REST simple en Node.js avec Express.
-
-L’objectif était de construire une application backend étape par étape en respectant une architecture claire :
+Ce projet consiste à développer une API REST simple en Node.js avec Express.  
+L’objectif était de construire l’application progressivement en respectant une architecture claire et structurée :
 
 Routes → Service → DAO → Base de données
 
-Le projet a été réalisé en suivant les consignes niveau débutant.
+Le travail a été réalisé étape par étape conformément aux consignes du niveau débutant.
 
 ---
 
-## 🧱 Ce que j’ai réalisé
+## Travail réalisé
 
-### ✔ Configuration de l’application
+### Configuration de l’application
+
 - Création d’un projet Express vide
-- Configuration de `app.js`
-- Ajout de `express.json()` et `cors`
-- Mise en place des routes
+- Configuration de l’application dans `app.js`
+- Ajout du middleware `express.json()`
+- Mise en place de CORS
+- Déclaration des routes
 
 ---
 
-### ✔ Mise en place de l’architecture
-- Dossier `routes`
-- Dossier `services`
-- Dossier `dao`
-- Séparation claire des responsabilités
+### Mise en place de l’architecture
+
+Organisation du projet en plusieurs couches :
+
+- `routes` : gestion des requêtes HTTP
+- `services` : logique métier
+- `dao` : accès aux données
+
+Cette séparation permet de garder un code structuré et cohérent.
 
 ---
 
-### ✔ Implémentation progressive
+### Implémentation progressive
+
+Le développement a été réalisé dans l’ordre suivant :
 
 1. Création d’une première route (`GET /articles`)
-2. Création du Service (logique métier)
-3. Création d’une DAO Memory (simulation des données)
+2. Création du service avec une méthode simple (`getAll`)
+3. Création d’une DAO en mémoire (simulation des données)
 4. Connexion Routes → Service → DAO
 5. Tests avec Postman
 6. Ajout progressif des autres fonctionnalités
 
 ---
 
-### ✔ CRUD complet
+### CRUD complet
 
 L’API permet :
 
-- GET tous les articles
-- GET un article par ID
-- POST créer un article
-- PUT modifier un article
-- DELETE supprimer un article
+- Récupérer tous les articles
+- Récupérer un article par son identifiant
+- Créer un article
+- Modifier un article
+- Supprimer un article
+
+Les codes d’erreur HTTP (400, 404, 500) sont gérés.
 
 ---
 
-### ✔ Connexion à MySQL
+### Connexion à MySQL
 
-- Création de la base `blog_db`
+- Création de la base de données `blog_db`
 - Création de la table `articles`
-- Remplacement de la DAO Memory par une DAO SQL
-- Connexion réelle à la base de données
-- Tests complets avec MySQL Workbench
+- Remplacement de la DAO mémoire par une DAO SQL
+- Connexion réelle à MySQL via `mysql2`
+- Tests réalisés avec MySQL Workbench et Postman
 
 ---
 
-## 🎯 Objectif pédagogique
+## Objectifs pédagogiques
 
-- Comprendre l’architecture d’une API REST
-- Séparer les couches (Routes / Service / DAO)
-- Manipuler MySQL avec Node.js
-- Implémenter un CRUD complet
+- Comprendre le fonctionnement d’une API REST
+- Mettre en place une architecture structurée
+- Séparer les responsabilités dans un projet backend
+- Manipuler une base de données MySQL avec Node.js
 - Tester une API avec Postman
-
----
-
-## 🛠 Technologies utilisées
-
-- Node.js
-- Express
-- MySQL
-- mysql2
-- Postman
 
 ---
 
